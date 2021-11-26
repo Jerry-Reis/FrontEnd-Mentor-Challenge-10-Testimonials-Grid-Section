@@ -47,7 +47,7 @@ body {
 
 .card {
     border-radius: 0.8rem;
-    padding: 25px 32px 30px 32px;
+    padding: 25px 30px 30px 30px;
 }
 
 .bgk-light {
@@ -124,7 +124,8 @@ body {
     grid-area: testim-1;
     background-image: url('../images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
-    background-position: 350px 0px;
+    background-position: 83% 0%;
+    background-size: auto;
     background-color: var(--moderate-violet);
 }
 
@@ -152,4 +153,27 @@ body {
 .testimonial-3 img,
 .testimonial-5 img {
     border: none;
+}
+
+@media (max-width: 1170px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        grid-template-columns: 512px;
+        grid-template-areas:
+            'testim-1'
+            'testim-2'
+            'testim-3'
+            'testim-4'
+            'testim-5';
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: auto;
+        margin: 2rem;
+    }
 }
