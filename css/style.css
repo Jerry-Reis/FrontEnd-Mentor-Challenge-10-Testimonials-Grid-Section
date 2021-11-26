@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    min-width: 100vw;
+
+    font-size: 1.3rem;
+    background-color: var(--light-grayish-blue);
+}
+
+.container {
+    display: grid;
+    gap: 2.65rem;
+    grid-template-columns: repeat(4, 256px);
+    grid-template-areas:
+        'testim-1 testim-1 testim-2 testim-5'
+        'testim-3 testim-4 testim-4 testim-5';
+}
+
+.card {
+    border-radius: 0.8rem;
+    padding: 25px 32px 30px 32px;
+}
+
+.bgk-light {
+    box-shadow: 5px 5px 50px -10px var(--light-gray);
+}
+
+.card-user {
+    display: flex;
+    align-items: center;
+}
+
+.card-user img {
+    width: 30px;
+
+    margin-right: 1.5rem;
+
+    border-radius: 50%;
+    border: 2px solid hsla(263, 55%, 52%, 0.9);
+}
+
+.testimonial-1 img {
+    border: 2px solid hsla(0, 0%, 100%, 0.3);
+}
+
+.card cite {
+    display: block;
+    margin: 20px 0px;
+
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: 600;
+
+    letter-spacing: 0.05rem;
+
+    color: var(--white);
+}
+
+.user-occupation {
+    font-size: 1.1rem;
+    color: var(--light-grayish-blue);
+    opacity: 0.5;
+}
+
+.bgk-light .user-occupation {
+    color: var(--very-dark-grayish-blue);
+}
+
+.bgk-dark .user-name {
+    color: var(--white);
+}
+
+.bgk-light cite {
+    color: var(--very-dark-grayish-blue);
+}
+
+.bgk-dark cite {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.bgk-dark blockquote {
+    line-height: 1.8rem;
+    color: var(--white);
+    opacity: 0.5;
+}
+
+.bgk-light blockquote {
+    line-height: 1.8rem;
+    color: var(--very-dark-grayish-blue);
+    opacity: 0.7;
+}
+
+.testimonial-1 {
+    grid-area: testim-1;
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 350px 0px;
+    background-color: var(--moderate-violet);
+}
+
+.testimonial-2 {
+    grid-area: testim-2;
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.testimonial-3 {
+    grid-area: testim-3;
+    background-color: var(--white);
+}
+
+.testimonial-4 {
+    grid-area: testim-4;
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.testimonial-5 {
+    grid-area: testim-5;
+    background-color: var(--white);
+}
+
+.testimonial-2 img,
+.testimonial-3 img,
+.testimonial-5 img {
+    border: none;
+}
